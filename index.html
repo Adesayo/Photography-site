@@ -3,8 +3,9 @@
 <head>
 <meta charset = "UTF-8">
 <meta name="viewport" content="width=device-width" initial-scale="1">
-<title>creative bee</title>
+<title>bybee</title>
 <link rel="stylesheet" type="text/css" href="main.css"/>
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 
 
@@ -47,7 +48,7 @@
 </section>
 
 <div id="portfolio">
-   
+
  <img src="faca.jpg" class="image-1" alt="image">
  <img src="product.jpg" class="image-2" alt="image">
  <img src="camera.jpg" class="image-3" alt="image">
@@ -71,7 +72,8 @@
 <div id="contact">
    <h3>Love my work?</h3>
    <p>Send a message and let me create memories for you in pixels</p>
-  <form action="">
+
+  <form action="" onsubmit="return validateForm()">
 <fieldset>
 
 
@@ -80,17 +82,21 @@
   <br>
 
 
- <input id="name" type="text" placeholder="Your phone number">
+ <input id="number" type="text" placeholder="Your phone number">
 
 <br>
 
-    <input id="email" type="email" placeholder="Your email address">
+    <input id="email" type="text" placeholder="Your email address">
 
   <br>
     <textarea id="message" placeholder="">
       Type your message here
     </textarea>
+    <div id="result">
+
+    </div>
    <button>Submit</button>
+
  </fieldset>
   </form>
 
@@ -112,7 +118,11 @@
 
 <div class="social">
   <h2>Follow me</h2>
-
+<ul>
+  <li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+  <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+  <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+</ul>
 </div>
 
 <div class="talk">
@@ -125,7 +135,9 @@
 
 </div>
 </footer>
+<script src="bybee.js">
 
+</script>
 </body>
 
 
