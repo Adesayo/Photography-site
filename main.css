@@ -1,36 +1,36 @@
- @import url('https://fonts.googleapis.com/css?family=Ma+Shan+Zheng&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Amatic+SC&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Exo+2&display=swap');
-
-*{}
+  @import url('https://fonts.googleapis.com/css?family=Economica&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Reenie+Beanie&display=swap');
+ @import url('https://fonts.googleapis.com/css?family=Slabo+27px&display=swap');
+ *{
+  outline: none;
+}
 body{
- font-family: 'Exo 2', sans-serif;
+font-family: 'Slabo 27px',serif ;
  width: 100%;
  margin: 0;
  padding:0%;
-}
-h1,h2,h3,h4{
-  font-family: 'Amatic SC', cursive;
-}
-li{
-list-style-type: none;
 
 }
+h1,h2,h3,h4{
+  font-family: 'Economica',sans-serif ;
+  color: #373239;
+}
+.cursive{
+font-family: 'Reenie Beanie',cursive;
+}
+button{
+  font-family: 'Economica',sans-serif ;
+}
+
 header{
   height: 800px;
-  background:linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url("bee.jpeg");
+  background:linear-gradient(rgba(233, 150, 122, 0.2),rgba(255, 250, 240, 0.2)), url("bee.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   color:#286da8;
-}
-header h1{
-  padding:1%;
-  color: #fff;
-  font-family: 'Ma Shan Zheng', cursive;
-  font-size:300%;
-}
 
-.desc{
+}
+ .desc{
   font-family: 'Indie Flower', cursive;
 
   padding-top: 15%;
@@ -38,59 +38,89 @@ header h1{
   float: right;
   width: 35%;
   color: #fff;
+  animation: show;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
+  animation-duration: 3s;
+   position: relative;
 }
+
+@keyframes show {
+ from{top: -700px}
+ to{top:0}
+}
+
 .desc h3{
-  font-size: 350%;
-  margin-bottom: -5%;
-}
-.desc p{
-  font-size: 150%;
-  width: 100%;
-  line-height: 200%;
+  font-size: 250%;
+  color: #000;
 }
 
 .desc button{
-  font-family:'Amatic SC', cursive;
+
   margin-bottom: 3%;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.8);
   border: 4px solid #dab692;
   width: 70%;
   height: 7%;
-
-
-text-transform: capitalize;
+  text-transform: capitalize;
   border-radius: 1em;
+  transition: all 2s;
 }
 
-.desc button:hover{
-  background-color: #000;
+.desc button:hover, .desc button:active{
+  border: 2px solid #dab692;
+  background-color: rgba(0, 0, 0, 0.3);
   transform: translateX(-55px);
   -webkit-transform: translateX(-55px);
 
 }
 
-.desc button:active{
-  background-color: #000;
-}
 
 .desc button a{
   color: #fff;
   text-decoration: none;
 }
 
+.about{
+  background-color:rgba(233, 183, 146, 0.3);
+  margin-top: 0%;
+  padding:2% 0;
+
+}
+.about .container {
+width: 70%;
+background-color: #fff;
+margin: 5% auto;
+padding: 2%;
+
+}
+
+.about h2{
+  font-size: 210%;
+  padding-left: 5%;
+}
+.about img{
+  width: 90%;
+  height: auto;
+  display: block;
+  margin: 1% auto;
+}
+
+.about p{
+  line-height: 160%;
+}
  .services{
   clear: both;
   width: 90%;
-  margin:0 auto 5% auto ;
+  margin:-3% auto 15% auto ;
   text-align: center;
 }
 
 .services h1{
   text-transform: uppercase;
 
-  color: #8f5b34;
-  padding-top: 10%;
-  font-size: 200%;
+  padding-top: 6%;
+
 }
 .gallery{
   width: 33.3%;
@@ -108,7 +138,7 @@ text-transform: capitalize;
 
 padding-top: 3%;
 font-size:120%;
-color: #dab692;
+color: #e9b792;
  text-transform: capitalize;
 
  }
@@ -116,92 +146,64 @@ color: #dab692;
   width: 70%;
   margin: 2% auto;
 }
+.create{
+  clear: both;
+   background-color:rgba(233, 183, 146, 0.4);
+   background-color: #faf0e6;
+  height: auto;
+  text-align: center;
+  margin: 45% 0 5% 0;
+  padding: 5%;
+}
+.create button{
+  display: inline-block;
+  padding: 2% 4%;
+  border: none;
+  text-transform: uppercase;
 
+  background-color:#000;
+
+}
+.create a{
+  color: #fff;
+  text-decoration: none;
+}
 #portfolio{
-  width: 95%;
-  margin: 55% auto 10% auto;
+  width: 80%;
+  margin:0 auto;
   display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  grid-template-rows: repeat(12,7vw);
+  grid-template-columns: repeat(8,1fr);
+  grid-template-rows:repeat(12,7vw)
+  grid-auto-flow: dense;
   grid-gap:1%;
 }
-
-
+#portfolio h1{
+  text-transform: uppercase;
+  text-align: center;
+  grid-column: 1/-1;
+  grid-row: 1/2;
+}
+.small{
+  grid-column: auto/span 2;
+  grid-row: auto/span 1;
+}
+.horizontal{
+grid-column: auto/span 5;
+grid-row: auto/span 1;
+}
+.vertical{
+  grid-column: auto/span 3;
+  grid-row: auto/span 5;
+}
+.big{
+  grid-row: auto/span 4;
+  grid-column: auto/span 3;
+}
 #portfolio img{
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: cover;
   display: block;
-}
-
-.image-1{
-grid-column-start: 1;
-grid-column-end: 3;
-grid-row-start: 1;
-grid-row-end: 3;
-}
-
-.image-2{
-grid-column-start: 3;
-grid-column-end: 5;
-grid-row-start: 1;
-grid-row-end: 3;
-}
-
-.image-3{
-grid-column-start: 5;
-grid-column-end: 9;
-grid-row-start: 1;
-grid-row-end: 6;
-}
-
-.image-4{
-grid-column-start: 1;
-grid-column-end: 5;
-grid-row-start: 3;
-grid-row-end: 6;
-}
-
-.image-5{
-grid-column-start: 1;
-grid-column-end: 5;
-grid-row-start: 6;
-grid-row-end: 9;
-}
-
-
-.image-6{
-grid-column-start: 5;
-grid-column-end: 9;
-grid-row-start: 6;
-grid-row-end: 9;
-}
-
-.image-7{
-grid-column-start: 1;
-grid-column-end: 4;
-grid-row-start: 9;
-grid-row-end: 12;
-}
-.image-8{
-grid-column-start: 4;
-grid-column-end: 9;
-grid-row-start: 9;
-grid-row-end: 12;
-}
-
-.image-9{
-grid-column-start: 5;
-grid-column-end: 9;
-grid-row-start: 6;
-grid-row-end: 9;
-}
-
-.image-10{
-grid-column-start: 5;
-grid-column-end: 9;
-grid-row-start: 6;
-grid-row-end: 9;
 }
 
 
@@ -218,19 +220,19 @@ grid-row-end: 9;
 
 #contact{
 
-  color: #fff;
   box-sizing: border-box;
   width: 100%;
   padding:2% 0;
 height:800px;
 margin-top: 10% auto 21% auto;
 background-size: cover;
-background:linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),url("camera.jpg");
+background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url("zsz.jpg");
 }
 
 #contact h3,#contact p{
   text-align: center;
   font-size: 150%;
+  color: #fff;
 }
 
 
@@ -238,7 +240,7 @@ fieldset{
   padding: 1%;
   width: 50%;
   margin: 0 auto;
-background-color: #f8f8ff;
+background-color: #fffaf4;
 }
 
 
@@ -247,8 +249,7 @@ input,textarea{
   font-size: 105%;
   padding: 2%;
   margin: 3% 5%;
-font-family: 'Exo 2', sans-serif;
-  border:1px solid #000;
+   border:1px solid #000;
   width: 90%;
 }
 
@@ -257,16 +258,16 @@ resize: none;
 height: 20%;
 }
 form button{
-  font-family:'Amatic SC', cursive;
-
-  width: 90%;
-  margin: 3% 5%;
+ width: 70%;
+  margin: 3% 15%;
+  text-transform: uppercase;
   height: 7%;
-  font-size: 170%;
-  background-image: -webkit-linear-gradient(top left, #dab692, #8a9ea7);
+  font-size: 120%;
+  background-image: -webkit-linear-gradient(top left, #dab692, #fff);
+  transition: all 2s;
 }
 form button:hover{
-  background-image: -webkit-linear-gradient(top left, #8a9ea7,#dab692 );
+  background-image: -webkit-linear-gradient(top left, #fff,#dab692 );
   transform: scale(0.8, 0.7);
   -webkit-transform: scale(0.8, 0.95);
   -m-transform: scale(0.8, 0.95);
@@ -282,42 +283,66 @@ form button:active{
   text-align: center;
 }
 
-   footer{
-   height: 300px;
-   width: ;
-background-color: #e8dfe0;
- background-size: cover;
-background-repeat: no-repeat;
-display: grid;
-grid-template-columns: repeat(3,1fr);
-padding:5% 1%;
-box-sizing: border-box;
- text-align: center;
-}
 
-footer a{
-  text-decoration: none;
-  font-weight: bold;
-  color: #8f5b34;
-  padding-bottom: 2%;
-}
+ #instagram{
+   text-align: center;
+   padding: 4%;
+   text-transform: capitalize;
+ }
 
-footer a:hover{
-  text-decoration: underline;
-}
 
-footer a:active{
-  text-decoration: underline;
-}
+ #instagram h2{
+   font-weight: bold;
+   font-style: oblique;
+   text-align: center;
+   padding-top: 3%;
+   font-size: 250%;
+   text-decoration: none;
+ }
+ #instagram h3{
+ color: #e9b792;
+ }
 
-footer h2{
+ #instagram a{
+   font-size: 200%;
+   text-decoration: none;
+
+}
+#instagram a:hover,#instagram a:active{
+   border-bottom: 1px solid #e9b792;
+   text-decoration: underline;
+ }
+ .insta{
+   display: grid;
+   width: 70%;
+   margin: 1% auto;
+   grid-template-columns:repeat(3,1fr);
+   grid-gap: 2%;
+ }
+
+
+ .insta img{
+   width: 100%;
+   height: auto;
+ }
+
+footer{
+  background-color:rgba(243, 214, 210, 0.5);
+  padding: 6%;
+  text-align: center;
+}
+footer p{
   text-transform: capitalize;
 }
+.credit{
+  font-style: oblique;
 
+}
 
+.credit a{
+  color: #000;
 
-
-
+}
 @media (min-width: 480px) and (max-width:768px) {
   header{
     height: 900px;
@@ -327,7 +352,7 @@ footer h2{
   width:40%;
   }
   .desc h3{
-    font-size: 300%;
+    font-size: 200%;
   }
 
   .desc button{
@@ -335,6 +360,18 @@ footer h2{
     height: 7%;
   }
 
+  .about .container {
+  width: 85%;
+
+  margin: 5% auto;
+  padding: 3%;
+
+  }
+
+  .about p{
+    line-height: 160%;
+    text-align:center;
+  }
 
 
    .services{
@@ -350,6 +387,11 @@ footer h2{
     float: none;
   }
 
+  .create{
+
+    margin: 15% 0 5% 0;
+    padding: 7%;
+  }
 
   #portfolio{
     width: 95%;
@@ -371,9 +413,11 @@ footer h2{
     width: 70%;
   }
 
-  footer{
-    height:250px;
-     }
+  #instagram a{
+    font-size: 150%;
+    text-decoration: none;
+
+  }
 }
 
 
@@ -404,6 +448,25 @@ footer h2{
   .desc button{
      font-size: 90%;
     width: 60%;
+  }
+
+  .about .container {
+  width: 85%;
+
+  margin: 5% auto;
+  padding: 3%;
+
+  }
+
+  .about p{
+    line-height: 160%;
+    text-align:center;
+  }
+
+  .create{
+
+    margin: 15% 0 5% 0;
+    padding: 7%;
   }
 
   .gallery{
@@ -455,21 +518,10 @@ textarea {
 resize: none;
 height: 20%;
 }
-form button{
-  width: 90%;
-  margin: 3% 5%;
-  height: 7%;
-  font-size: 120%;
-  background-image: -webkit-linear-gradient(top left, #dab692, #8a9ea7);
+#instagram a{
+  font-size: 150%;
+  text-decoration: none;
+
 }
-
-
-  footer{
-    height:500px;
-    display: block;
-    margin: 0 auto;
-
-  }
-
 
 }
